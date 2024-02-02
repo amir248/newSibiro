@@ -67,6 +67,18 @@
     width: 0 !important;
     height: 0 !important;
   }
+  .line {
+    width: 45vw;
+    height: 60vh;
+  }
+  .images > .fivePhoto > .line > img {
+    /* height: 331px; */
+    width: 100%;
+    height: 96%;
+  }
+  .fivePhoto {
+    gap: 0;
+  }
 }
 @media screen and (max-width: 831px) {
   .about--business {
