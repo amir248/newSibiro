@@ -64,44 +64,24 @@
   <link rel="stylesheet" href="style/intersectionObserver.css" />
   <link rel="stylesheet" href="style/menu.css" />
   <!-- <<<<<<<<<< -->
+  <style media="screen">
+    header{
+      top:0; /* I don't understand what it */
+    }
+  </style>
 </head>
 <body>
-  <div class="menu--area">
-    <button class="menu--close-btn">
-      <img src="image/icons/close.png" alt="" />
-    </button>
-    <span>
-      <a class="nav--links" href="/">ГЛАВНАЯ</a>
-      <a class="nav--links" href="/portfolio">ПОРТФОЛИО</a>
-      <a class="nav--links" href="/montages">ФОТО С МОНТАЖЕЙ</a>
-      <a class="nav--links discount--link" href="/#discountsAndPromotions"
-        >СКИДКИ И АКЦИИ</a
-      >
-      <a class="nav--links" href="photo">КАТАЛОГ</a>
-      <a class="nav--links" href="tel:+79137870404"
-        >+7-913&nbsp;787&nbsp;04&nbsp;04</a
-      >
-      <a class="nav--links" href="#" onClick="getConsultation()"
-        >ONLINE ЗАПИСЬ НА ВСТРЕЧУ</a
-      >
-      <span class="social--links">
-        <a class="nav--links" href="#"
-          ><img src="/image/ico/whatsapp.svg" alt=""
-        /></a>
-        <a class="nav--links" href="#"
-          ><img src="/image/ico/telegram.svg" alt=""
-        /></a>
-      </span>
-    </span>
-  </div>
+<header w3-include-html='includeHTML/headerInclude.html'></header>
+
+
   <main>
     <h1>it's that mabe be gallery or not, but there likn here</h1>
     <!--#include virtual="include.html"-->
-     <div w3-include-html="photo/include.html"></div>
+     <div w3-include-html="includeHTML/include.html"></div>
     <p></p>
   </main>
   <button type="button" name="button" onClick="goToBack()">Вернуться на главную</button>
-
+<footer w3-include-html="includeHTML/footerInclude.html"></footer>
 </body>
 <script type="text/javascript" src='../script/onClickToPage.js'></script>
 
@@ -139,4 +119,5 @@ function includeHTML() {
 }
 includeHTML();
 </script>
+
 </html>
