@@ -5,6 +5,13 @@ body {
 html {
   overflow: hidden;
 }
+:root {
+  --middleWidth: 717px;
+  --maxWidth: 1920px; /*1530*/
+  --mainFontSize: 11px;
+  --green: #406950;
+  --grey: #e3e1d9;
+}
 header {
   display: block;
 }
@@ -412,7 +419,7 @@ ul {
   height: 24px;
   margin-top: -9px;
   border-radius: 50%;
-  background-color: #e3e3e3;
+  background-color: var(--grey);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   display: flex;
@@ -420,7 +427,10 @@ ul {
   justify-content: center;
 }
 .slider__arrow:hover {
-  background-color: #eecf49;
+  background-color: var(--green);
+}
+.slider__arrow:hover > img {
+  filter: invert();
 }
 .slider__arrow--next {
   right: 1.5rem;

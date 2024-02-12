@@ -257,7 +257,7 @@ form {
   height: 600px;
 }
 .swiper-pagination-bullet-active {
-  background-color: #f4ce14 !important;
+  background-color: var(--grey) !important;
   border: 1px solid !important;
 }
 .swiper-button-next,
