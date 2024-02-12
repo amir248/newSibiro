@@ -1,6 +1,7 @@
 .lazy-imageTwo {
   font-weight: 200 !important;
   font-size: 2.2rem;
+  display: flex;
 }
 
 .lazy-imageThree {
@@ -8,15 +9,8 @@
   margin-left: 0px;
   transition: all 0.7s ease-out 0.3s;
 }
-
-/* .lazy-image{
-  opacity:0;
-    margin-left: -330px;
-    transition: all 0.7s ease-out 0.3s;
-} */
 .lazy-image > img:nth-child(1) {
   opacity: 0.7;
-  /* margin-left: 330px; */
   transition: all 0.2s ease-out 0.1s;
 }
 #discountsAndPromotions .lazy-image > img:hover {
@@ -41,11 +35,3 @@
   margin-left: 0;
   transition: all 0.7s ease-out 0.3s;
 }
-
-/* #twoImg{
-  opacity:0;
-  margin-left: 230px;
-  transition: all 0.7s ease-out 0.3s;
-  transform: rotate(1080deg);
-
-} */
