@@ -51,6 +51,21 @@
 
 <!-- >>>>>> -->
 
+<link rel="stylesheet" href="photo/photos.css" />
+<style media="screen">
+
+    .boxImg{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 367px;
+      height: 300px;
+      margin: 3%;
+      /* max-height: 400px; */
+    }
+
+</style>
+
   <link rel="stylesheet" href="../style/master.css" />
   <link rel="stylesheet" href="../style/responsive.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -73,12 +88,10 @@
 <header w3-include-html='/includeHTML/headerInclude.html'></header>
 
 
-  <main>
     <!-- <h1>it's that mabe be gallery or not, but there likn here</h1> -->
     <!--#include virtual="include.html"-->
-     <div w3-include-html="/includeHTML/include.html"></div>
-    <p></p>
-  </main>
+     <main w3-include-html="/includeHTML/include.html"></main>
+
   <button type="button" name="button" onClick="goToBack()">Вернуться на главную</button>
 <footer w3-include-html="/includeHTML/footerInclude.html"></footer>
 </body>
