@@ -106,8 +106,11 @@
 <script type="text/javascript" src='script/ifDarkThemes.js'></script> -->
 
 <script type="text/javascript">
-  if(document.querySelector('.menu--close-btn > img:nth-child(1)')!==null){
-    document.querySelector('.menu--close-btn > img:nth-child(1)').setAttribute('src','../image/icons/close.png');
+setTimeout(()=>{
+  if(document.querySelector('.menu--close-btn > img')!==null&&document.querySelector('.menu--close-btn > img')!==undefined){
+    document.querySelector('.menu--close-btn > img').setAttribute('src','../image/icons/close.png');
   }
+},1100);
+
 </script>
 </html>
