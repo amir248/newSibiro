@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} sibiro.ru/photo/photo
+RewriteRule (.*) https://sibiro.ru/photo$1 [R=301,L]
