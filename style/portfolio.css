@@ -49,6 +49,7 @@ button {
   justify-content: center;
 }
 .image--library {
+  padding-inline: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -60,12 +61,12 @@ button {
   align-items: flex-start;
   position: relative;
   width: 230px;
-  height: 300px !important;
+  height: 370px !important;
 }
 .line--dif img {
   width: 100%;
-  height: 93%;
-  position: absolute;
+  height: 100%;
+  position: relative;
   object-fit: cover;
 }
 .line--dif > a {
@@ -73,7 +74,7 @@ button {
   font-size: 18px;
   text-decoration: none;
   bottom: 0;
-  position: absolute;
+  position: relative;
 }
 .line--dif > a::after {
   content: "";
@@ -99,5 +100,5 @@ button {
 .welcome--msg > p {
   text-align: center;
   font-weight: 100 !important;
-  line-height: 1.3rem;
+  /* line-height: 1.3rem; */
 }

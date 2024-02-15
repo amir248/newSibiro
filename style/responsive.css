@@ -108,7 +108,7 @@
     line-height: 2rem !important;
   }
   .sale-item {
-    width: 400px;
+    width: 300px !important;
   }
 }
 @media screen and (max-width: 612px) {
