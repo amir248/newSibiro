@@ -75,7 +75,7 @@
           "url": "https://sibiro.ru/"
         },
         "datePublished": "2023-09-07",
-        "dateModified": "2023-10-01",
+        "dateModified": "2024-02-21",
         "image": "https://sibiro.ru/",
         "articleSection": "Promotion Discounts",
         "articleBody": "Фотографии готовых работ, изготовления корпусной мебели под заказ.",
@@ -141,12 +141,49 @@
 
       gtag("config", "G-781PBSRKSM");
     </script>
+
+    <!-- >>>>>> -->
+
+    <link rel="stylesheet" href="photos.css" />
+    <style media="screen">
+
+        .boxImg{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 367px;
+          height: 300px;
+          margin: 3%;
+          /* max-height: 400px; */
+        }
+
+    </style>
+
+      <link rel="stylesheet" href="../style/master.css" />
+      <link rel="stylesheet" href="../style/responsive.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="корпусная мебель под заказ" />
+      <link
+        rel="shortcut icon"
+        href="image/icons/Sibiro--tab--logo.svg"
+        type="image/svg" />
+      <link rel="stylesheet" href="../style/style.css" />
+      <link rel="stylesheet" href="../style/intersectionObserver.css" />
+      <link rel="stylesheet" href="../style/menu.css" />
+
+      <style media="screen">
+        header{
+          top:0; /* I don't understand what it */
+        }
+      </style>
+      <!-- <<<<<<<<<< -->
   </head>
   <body>
     <main>
+      <header w3-include-html='/includeHTML/headerInclude.html'></header>
       <h1>Прихожие</h1>
       <div class="photo">
-        <img
+        <img id="img"
           src="https://sibiro.ru/image/gallery/one_13.jpg"
           alt="мебель для гостиной" />
       </div>
@@ -167,19 +204,32 @@
       <button type="button" name="button" onClick="goToBack()">
         Перейти на главную
       </button>
+      <footer w3-include-html="/includeHTML/footerInclude.html"></footer>
     </main>
   </body>
+  <!-- script that go to include header and footer -->
+  <script defer src="../script/includePageSection.js"></script>
+
+  <script type="text/javascript">
+  setTimeout(()=>{
+    if(document.querySelector('.menu--close-btn > img')!==null&&document.querySelector('.menu--close-btn > img')!==undefined){
+      document.querySelector('.menu--close-btn > img').setAttribute('src','../image/icons/close.png');
+    }
+  },1100);
+  window.addEventListener('DOMContentLoaded',()=>{
+    document.querySelector('head > link[rel="shortcut icon"]').setAttribute('href','/image/icons/Sibiro--tab--logo.svg');
+  })
+  </script>
+  <!-- the end include -->
   <script type="text/javascript">
     let copyImageLink = [
-      "image/gallery/hallways/IMG_4292.JPG",
-      "image/gallery/hallways/IMG_4293.JPG",
-      "image/gallery/hallways/IMG_4294.JPG",
-      "image/gallery/hallways/IMG_4295.JPG",
-      "image/gallery/hallways/IMG_4296.JPG",
-      "image/gallery/newPic/skaf.jpg",
-      "image/gallery/newPic/skas.jpg",
-      "image/gallery/newPic/skav.jpg",
-      "image/gallery/one_16.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom001.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom002.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom003.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom004.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom005.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom006.jpg",
+      "image/gallery/livingRoom/livingRoom-1/livingRoom007.jpg"
     ];
     let countClickOnArrows = +0;
     function createArrows() {
@@ -194,32 +244,32 @@
       document.querySelector(".photo").append(rightArrow);
 
       document.querySelector(".leftArrow").addEventListener("click", () => {
-        // console.log('lefft CLICK '+countClickOnArrows);
+        console.log('lefft CLICK '+countClickOnArrows);
         countClickOnArrows--;
         if (countClickOnArrows <= 0) {
           countClickOnArrows = copyImageLink.length - 1;
           // console.log(copyImageLink.length);
         }
         document
-          .querySelector("img")
+          .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
       });
       document.querySelector(".rightArrow").addEventListener("click", () => {
-        // console.log('Right Click! '+countClickOnArrows);
+        console.log('Right Click! '+countClickOnArrows);
         countClickOnArrows++;
         if (countClickOnArrows >= copyImageLink.length) {
           countClickOnArrows = 0;
         }
         document
-          .querySelector("img")
+          .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
       });
     }
     window.addEventListener("DOMContentLoaded", createArrows);
     document
-      .querySelector("img")
+      .querySelector("#img")
       .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
-    document.querySelector("img").addEventListener("click", () => {
+    document.querySelector("#img").addEventListener("click", () => {
       // console.log('click'+countClickOnArrows);
       countClickOnArrows++;
       if (countClickOnArrows >= copyImageLink.length) {

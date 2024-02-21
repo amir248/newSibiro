@@ -109,139 +109,55 @@
 
       gtag("config", "G-781PBSRKSM");
     </script>
+
+    <!-- >>>>>> -->
+
+    <link rel="stylesheet" href="photos.css" />
+    <style media="screen">
+
+        .boxImg{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 367px;
+          height: 300px;
+          margin: 3%;
+          /* max-height: 400px; */
+        }
+
+    </style>
+
+      <link rel="stylesheet" href="../style/master.css" />
+      <link rel="stylesheet" href="../style/responsive.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="корпусная мебель под заказ" />
+      <link
+        rel="shortcut icon"
+        href="image/icons/Sibiro--tab--logo.svg"
+        type="image/svg" />
+      <link rel="stylesheet" href="../style/style.css" />
+      <link rel="stylesheet" href="../style/intersectionObserver.css" />
+      <link rel="stylesheet" href="../style/menu.css" />
+
+      <style media="screen">
+        header{
+          top:0; /* I don't understand what it */
+        }
+      </style>
+      <!-- <<<<<<<<<< -->
+
   </head>
   <body>
-    <div class="discount--view">
-      <div class="sale-container">
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-        <div class="sale-item">
-          <p>
-            New salon in the Orange Sky shopping center Daily from 10:30-19:30
-          </p>
-        </div>
-      </div>
-      <button class="discount--close-btn">
-        <!-- <img src="../public/image/icons/close.png" alt="" /> -->
-      </button>
-    </div>
-    <header class="navbar">
-      <nav>
-        <a href="../views/index.html" class="lazy-imageTwo logo">Sibiro</a>
-        <ul>
-          <li><a href="/">ГЛАВНАЯ</a></li>
-          <li><a href="/portfolio">ПОРТФОЛИО</a></li>
-          <li><a href="../views/montages.html">ФОТО С МОНТАЖЕЙ</a></li>
-          <li><a href="#discountsAndPromotions">СКИДКИ И АКЦИИ</a></li>
-          <li class="dropdown--menu">
-            <a href="/photo" class="dropdown--menu-a">КАТАЛОГ &darr;</a>
-            <span class="sub--menu">
-              <a href="">DEEPHOUSE | Tables & Chairs</a>
-              <a href="">Complete Equipment</a>
-              <a href="">Divan.ru</a>
-            </span>
-          </li>
-          <li>
-            <a href="tel:+79137870404">+7-913&nbsp;787&nbsp;04&nbsp;04</a>
-          </li>
-          <li>
-            <a href="#" onClick="getConsultation()">ONLINE ЗАПИСЬ НА ВСТРЕЧУ</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
     <main>
+      <header w3-include-html='/includeHTML/headerInclude.html'></header>
       <span>
         <h1>Заказать кухню.</h1>
         <p>Кухни под заказ по индивидуальным проектам.</p>
       </span>
       <div class="photo">
         <img
-          src="https://sibiro.ru/image/gallery/one_11.jpg"
+          id="img"
+          src="image/gallery/kitchen/kitchenDesign-4/kitchen021.jpg"
           alt="заказать кухню" />
       </div>
       <p>
@@ -255,26 +171,45 @@
       <button class="button" type="button" name="button" onClick="goToBack()">
         Вернуться на главную
       </button>
+      <footer w3-include-html="/includeHTML/footerInclude.html"></footer>
+
     </main>
   </body>
+  <!-- script that go to include header and footer -->
+  <script defer src="../script/includePageSection.js"></script>
+
+  <script type="text/javascript">
+  setTimeout(()=>{
+    if(document.querySelector('.menu--close-btn > img')!==null&&document.querySelector('.menu--close-btn > img')!==undefined){
+      document.querySelector('.menu--close-btn > img').setAttribute('src','../image/icons/close.png');
+    }
+  },1100);
+  window.addEventListener('DOMContentLoaded',()=>{
+    document.querySelector('head > link[rel="shortcut icon"]').setAttribute('href','/image/icons/Sibiro--tab--logo.svg');
+  })
+  </script>
+<!-- the end include -->
+
+
+
   <script src="../public/script/script.js"></script>
   <script type="text/javascript">
     let copyImageLink = [
-      "../public/image/gallery/aprl14.jpg",
-      "../public/image/gallery/aprl15.jpg",
-      "../public/image/gallery/aprl16.jpg",
-      "../public/image/gallery/aprl17.jpg",
-      "../public/image/gallery/tulaKitchen/image0007.jpg",
-      "../public/image/gallery/tulaKitchen/image0010.jpg",
-      "../public/image/gallery/tulaKitchen/image0011.jpg",
-      "../public/image/gallery/tulaKitchen/image0012.jpg",
-      "../public/image/gallery/tulaKitchen/image0014.jpg",
-      "../public/image/gallery/tulaKitchen/image0015.jpg",
-      "../public/image/gallery/tulaKitchen/image0018.jpg",
-      "../public/image/gallery/tulaKitchen/image0019.jpg",
-      "../public/image/gallery/tulaKitchen/image0027.jpg",
-      "../public/image/gallery/tulaKitchen/image0028.jpg",
-      "../public/image/gallery/tulaKitchen/image0029.jpg",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen022.jpg",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen023.jpg",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen024.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen001.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen002.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen003.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen004.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen005.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen006.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen007.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen008.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen009.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen010.jpg",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen011.jpg"
+
     ];
     let countClickOnArrows = +0;
     function createArrows() {
@@ -296,7 +231,7 @@
           // console.log(copyImageLink.length);
         }
         document
-          .querySelector("img")
+          .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
       });
       document.querySelector(".rightArrow").addEventListener("click", () => {
@@ -306,26 +241,26 @@
           countClickOnArrows = 0;
         }
         document
-          .querySelector("img")
+          .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
       });
     }
     window.addEventListener("DOMContentLoaded", createArrows);
-    document.querySelector("img").addEventListener("click", () => {
+    document.querySelector("#img").addEventListener("click", () => {
       // console.log('click'+countClickOnArrows);
       countClickOnArrows++;
       if (countClickOnArrows >= copyImageLink.length) {
         countClickOnArrows = 0;
       }
       document
-        .querySelector("img")
+        .querySelector("#img")
         .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
     });
   </script>
   <script
     type="text/javascript"
-    src="../public/script/onClickToPage.js"></script>
+    src="/script/onClickToPage.js"></script>
   <script
     type="text/javascript"
-    src="../public/script/ifDarkThemes.js"></script>
+    src="/script/ifDarkThemes.js"></script>
 </html>

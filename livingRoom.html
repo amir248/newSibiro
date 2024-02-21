@@ -132,20 +132,78 @@
 
   gtag('config', 'G-781PBSRKSM');
   </script>
+  <!-- >>>>>> -->
+
+  <link rel="stylesheet" href="photos.css" />
+  <style media="screen">
+
+      .boxImg{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 367px;
+        height: 300px;
+        margin: 3%;
+        /* max-height: 400px; */
+      }
+
+  </style>
+
+    <link rel="stylesheet" href="../style/master.css" />
+    <link rel="stylesheet" href="../style/responsive.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="корпусная мебель под заказ" />
+    <link
+      rel="shortcut icon"
+      href="image/icons/Sibiro--tab--logo.svg"
+      type="image/svg" />
+    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/intersectionObserver.css" />
+    <link rel="stylesheet" href="../style/menu.css" />
+
+    <style media="screen">
+      header{
+        top:0; /* I don't understand what it */
+      }
+    </style>
+    <!-- <<<<<<<<<< -->
 </head>
 <body>
   <main>
+    <header w3-include-html='/includeHTML/headerInclude.html'></header>
 <h1>Гостиная</h1>
 <div class="photo">
-  <img src="#" alt="мебель в гостинную под заказ">
+  <img id="img" src="#" alt="мебель в гостинную под заказ">
 </div>
 <p>Гостиная – комната, к которой приковано больше всего внимания. Здесь по вечерам собирается вся семья, разговаривает, смотрит телевизор, играет, сюда приглашают гостей. Поэтому мебель должна быть соответствующая. Удобная и практичная, комфортная и вместительная, все предметы обязаны сочетаться и создавать единый дизайн. В каталоге собраны оригинальные дизайнерские идеи мебели для гостиной для создания уютной и дружеской атмосферы, которая вдохновляет и заряжает положительной энергией. <a href="tel:+79137870404">8&nbsp;913&nbsp;787&nbsp;04&nbsp;04</a></p>
 <button type="button" name="button" onClick="goToBack()">Перейти на главную</button>
 
+<footer w3-include-html="/includeHTML/footerInclude.html"></footer>
   </main>
 </body>
+<!-- script that go to include header and footer -->
+<script defer src="../script/includePageSection.js"></script>
+
 <script type="text/javascript">
-let copyImageLink=['image/gallery/livingRoom/photo_2022-04-09_20-25-28.jpg','image/gallery/livingRoom/photo_2022-04-09_20-26-50.jpg','image/gallery/livingRoom/photo_2022-04-09_20-26-55.jpg','image/gallery/livingRoom/photo_2022-04-09_20-26-58.jpg','image/gallery/livingRoom/photo_2022-04-09_20-27-00.jpg','image/gallery/livingRoom/photo_2022-04-09_20-27-02.jpg','image/gallery/livingRoom/photo_2022-04-09_20-27-05.jpg','image/gallery/one_13.jpg'];
+setTimeout(()=>{
+  if(document.querySelector('.menu--close-btn > img')!==null&&document.querySelector('.menu--close-btn > img')!==undefined){
+    document.querySelector('.menu--close-btn > img').setAttribute('src','../image/icons/close.png');
+  }
+},1100);
+window.addEventListener('DOMContentLoaded',()=>{
+  document.querySelector('head > link[rel="shortcut icon"]').setAttribute('href','/image/icons/Sibiro--tab--logo.svg');
+})
+</script>
+<!-- the end include -->
+<script type="text/javascript">
+let copyImageLink=[
+'image/gallery/livingRoom/livingRoom-1/livingRoom001.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom002.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom003.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom004.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom005.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom006.jpg',
+'image/gallery/livingRoom/livingRoom-1/livingRoom007.jpg'];
 let countClickOnArrows=+0;
 function createArrows(){
   let leftArrow=document.createElement('div');
@@ -165,7 +223,7 @@ function createArrows(){
       countClickOnArrows=copyImageLink.length-1;
       // console.log(copyImageLink.length);
     }
-    document.querySelector('img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
   });
   document.querySelector('.rightArrow').addEventListener('click',()=>{
     // console.log('Right Click! '+countClickOnArrows);
@@ -173,18 +231,18 @@ function createArrows(){
     if(countClickOnArrows>=copyImageLink.length){
       countClickOnArrows=0;
     }
-    document.querySelector('img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
   });
 }
 window.addEventListener('DOMContentLoaded',createArrows);
-document.querySelector('img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
-  document.querySelector('img').addEventListener('click',()=>{
+document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+  document.querySelector('#img').addEventListener('click',()=>{
     // console.log('click'+countClickOnArrows);
     countClickOnArrows++;
     if(countClickOnArrows>=copyImageLink.length){
       countClickOnArrows=0;
     }
-    document.querySelector('img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
   });
 </script>
 <script type="text/javascript" src='script/onClickToPage.js'></script>
