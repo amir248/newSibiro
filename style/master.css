@@ -203,7 +203,7 @@ section > .firstSection > span {
   line-height: 1;
   text-decoration: none;
 }
-.images > .fivePhoto > .line:after {
+/* .images > .fivePhoto > .line:after {
   margin-block: 5px;
   display: block;
   position: absolute;
@@ -218,7 +218,7 @@ section > .firstSection > span {
 .images > .fivePhoto > .line:focus:after,
 .images > .fivePhoto > .line:hover:after {
   width: 100%;
-}
+} */
 .images > .buttonOnNextPhoto > button {
   background: 0 0;
   border: 0.1px solid #000;

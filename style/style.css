@@ -32,6 +32,7 @@ body {
   --middleWidth: 717px;
   --maxWidth: 1920px; /*1530*/
   --mainFontSize: 11px;
+  --main: #b67352;
   --green: #406950;
   --grey: #e3e1d9;
 }
@@ -132,7 +133,7 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 0.3rem 0;
-  background-color: #b67352;
+  background-color: var(--green);
   color: #fff;
   z-index: 999;
   height: 40px;
@@ -190,7 +191,7 @@ p {
 button:hover .btn--logo {
   filter: invert();
 }
-form {
+/* form {
   display: flex;
   flex-direction: column;
 }
@@ -201,15 +202,15 @@ form {
   margin-block: 1%;
   border: 0;
   border-radius: 2px;
-}
-.form--div {
+} */
+/* .form--div {
   display: flex;
   justify-content: space-around;
   align-items: center;
   max-width: var(--maxWidth);
   width: 100%;
   min-height: 300px;
-  background: #406950;
+  background: var(--main);
   flex-wrap: wrap;
   padding-block: 100px;
 }
@@ -223,7 +224,7 @@ form {
   color: white;
   border: 0.2px solid;
   cursor: pointer;
-}
+} */
 .text p {
   text-align: center;
 }
@@ -314,7 +315,7 @@ summary {
   transition: all 0.2s;
 }
 .accordion:hover {
-  background-color: #406950;
+  background-color: var(--green);
   color: #fff;
 }
 .accordion:hover > img {
