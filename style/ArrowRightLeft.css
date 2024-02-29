@@ -1,0 +1,32 @@
+main img{
+  width:100%;
+  max-width: 300px;
+}
+.photo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+@media(max-width:400px){
+  .photo{
+    flex-direction: column;
+  }
+}
+.photo > .leftArrow{
+  margin-right:15px;
+  font-size: 55px;
+}
+.photo > .leftArrow:hover{
+  color:violet;
+  border-radius: 17px;
+  background: lightgrey;
+}
+.photo > .rightArrow{
+  margin-left:15px;
+  font-size: 55px;
+}
+.photo > .rightArrow:hover{
+  color:violet;
+  border-radius: 17px;
+  background: lightgrey;
+}
