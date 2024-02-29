@@ -83,3 +83,7 @@ main h1 {
   width: 20px !important;
   height: 28px !important;
 }
+main > p{
+  width:100%;
+  max-width:900px;
+}
