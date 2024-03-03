@@ -27,7 +27,13 @@ function includeHTML() {
 }
 includeHTML();
 
+
 setTimeout(()=>{
+  document.querySelector('a.nav--links:nth-child(4)').addEventListener('click',()=>{
+    if(location.href==='https://sibiro.ru/montages/'||location.href==='https://sibiro.ru/portfolio'||location.href==='https://sibiro.ru/photo'){
+      location.href='https://sibiro.ru/#discountsAndPromotions';
+    }
+  });
   const mobileNavbar = document.querySelector(".mobile--nav");
   const desktopNavbar = document.querySelector(".desktop--nav");
   const menuArea = document.querySelector(".menu--area");
