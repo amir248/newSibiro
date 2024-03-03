@@ -242,7 +242,8 @@
       </div>
     </section>
     <main>
-      <section class="firstSection reveal">
+  <!-- <header w3-include-html='/includeHTML/headerInclude.html'></header> -->
+  <section class="firstSection reveal">
         <h1 id="photo">Производство</h1>
 
         <p>
@@ -651,40 +652,25 @@
       </section>
     </main>
     <footer>
-      <span id="footer reveal"></span>
-      <div class="icon">
-        <li class="item">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://api.whatsapp.com/send/?phone=79137870404&text=Get consultation">
-            <img src="image/ico/whatsapp.svg" alt="" />
-          </a>
-        </li>
-        <li class="item">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://t.me/IldarNavrutdinov">
-            <img src="image/ico/telegram.svg" alt="" />
-          </a>
-        </li>
-      </div>
-      <div class="text">
-        <p>
-          © «SIBIRO — Студия мебели», 2010 — 2023<br />
-
-          ООО "Мебель - град"<br />
-          ИНН/КПП : 7017369046/701701001<br />
-          ОГРН : 1157017000799<br />
-
-          Мебель на заказ в Новосибирске и области: Кухни , Шкафы , Кровати ,
-          Стулья
-        </p>
-        <span>&copy; <a href="/">Sibiro.ru</a> </span>
-      </div>
+   
     </footer>
+  <footer w3-include-html="/includeHTML/footerInclude.html"></footer>
+
   </body>
+  <!-- script that go to include header and footer -->
+<script defer src="../script/includePageSection.js"></script>
+
+<script type="text/javascript">
+setTimeout(()=>{
+  if(document.querySelector('.menu--close-btn > img')!==null&&document.querySelector('.menu--close-btn > img')!==undefined){
+    document.querySelector('.menu--close-btn > img').setAttribute('src','../image/icons/close.png');
+  }
+},1100);
+window.addEventListener('DOMContentLoaded',()=>{
+  document.querySelector('head > link[rel="shortcut icon"]').setAttribute('href','/image/icons/Sibiro--tab--logo.svg');
+})
+</script>
+<!-- the end include -->
   <script src="script/navbar.js"></script>
   <script src="script/script.js"></script>
   <!-- <script src="../public/script/loader.js"></script> -->
