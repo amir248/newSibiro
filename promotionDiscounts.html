@@ -49,9 +49,43 @@
 
   gtag('config', 'G-781PBSRKSM');
   </script>
+    <!-- >>>>>> -->
+
+    <link rel="stylesheet" href="photos.css" />
+    <style media="screen">
+
+        .boxImg{
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          max-width: 367px;
+          height: 300px;
+          margin: 3%;
+          /* max-height: 400px; */
+        }
+
+    </style>
+
+      <link rel="stylesheet" href="../style/master.css" />
+      <link rel="stylesheet" href="../style/responsive.css" />
+      <link
+        rel="shortcut icon"
+        href="image/icons/Sibiro--tab--logo.svg"
+        type="image/svg" />
+      <link rel="stylesheet" href="../style/style.css" />
+      <link rel="stylesheet" href="../style/intersectionObserver.css" />
+      <link rel="stylesheet" href="../style/menu.css" />
+
+      <style media="screen">
+        header{
+          top:0; /* I don't understand what it */
+        }
+      </style>
+      <!-- <<<<<<<<<< -->
 </head>
 <body>
-  <main>
+    <header w3-include-html='/includeHTML/headerInclude.html'></header>
+    <main>
 <h1>Promotion Discounts</h1>
 <button type="button" name="button" onClick="goToBack()">Go to back</button>
 <p>вернуться на главную</p><hr style="background:transparent;color:transparent;">
@@ -89,8 +123,11 @@
   <button type="button" name="button" onClick="getConsultation()">Получить консультацию</button>
 
 </div>
+<footer w3-include-html="/includeHTML/footerInclude.html"></footer>
   </main>
 </body>
+<script defer src="../script/includePageSection.js"></script>
+
 <script type="text/javascript" src='script/onClickToPage.js'></script>
 <script type="text/javascript" src='script/ifDarkThemes.js'></script>
 
