@@ -30,7 +30,7 @@ includeHTML();
 
 setTimeout(()=>{
   document.querySelector('a.nav--links:nth-child(4)').addEventListener('click',()=>{
-    if(location.href==='https://sibiro.ru/montages/'||location.href==='https://sibiro.ru/portfolio'||location.href==='https://sibiro.ru/photo'||location.href==='https://sibiro.ru/promotionDiscounts'){
+    if(location.href==='https://sibiro.ru/montages/'||location.href==='https://sibiro.ru/portfolio/'||location.href==='https://sibiro.ru/photo/'||location.href==='https://sibiro.ru/promotionDiscounts'){
       location.href='https://sibiro.ru/#discountsAndPromotions';
     }
   });
