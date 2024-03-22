@@ -328,7 +328,7 @@ body > main > section > p {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  align-items: center;
+  align-items: start;
   position: relative;
   flex-wrap: wrap;
   width: 100%;
@@ -337,11 +337,15 @@ body > main > section > p {
 }
 #discountsAndPromotions > .imge {
   width: 340px;
+  min-height: 190px;
 }
 #discountsAndPromotions > .imge > img {
   width: 100%;
   max-width: 350px;
-  height: 235px;
+  /* height: 235px; */
+}
+#discountsAndPromotions > .imge > h3{
+ font-size: 20px;
 }
 #discountsAndPromotions > .imge:hover {
   opacity: 1 !important;
