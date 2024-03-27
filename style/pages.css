@@ -21,7 +21,7 @@ body {
   margin-right: auto;
   width: 100%;
   max-width: 1540px;
-  text-align: center;
+  /* text-align: center; */
   font-family: normal;
   overflow-x: hidden;
   display: flex;
