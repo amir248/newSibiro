@@ -48,7 +48,11 @@ function returnBack() {
     document.documentElement.scrollTop = 0;
   });
 }
-returnBack();
+
+// Important I don't now what workint that here
+setTimeout(()=>{
+  returnBack();
+},700);
 
 function accordianComponent() {
   var acc = document.getElementsByClassName("accordion");
