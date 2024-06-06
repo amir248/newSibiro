@@ -50,9 +50,9 @@ function returnBack() {
 }
 
 // Important I don't now what workint that here
-setTimeout(()=>{
-  returnBack();
-},1700);
+// setTimeout(()=>{
+//   returnBack();
+// },1700);
 
 function accordianComponent() {
   var acc = document.getElementsByClassName("accordion");
