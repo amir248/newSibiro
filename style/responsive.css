@@ -71,7 +71,7 @@
     width: 45vw;
     height: 60vh;
   }
-  .images > .fivePhoto > .line > img {
+  .images > .fivePhoto > .line > picture > img {
     /* height: 331px; */
     width: 100%;
     height: 96%;
@@ -90,7 +90,7 @@
     width: 200px;
     height: 260px;
   }
-  .images > .fivePhoto > .line > img {
+  .images > .fivePhoto > .line > picture > img {
     width: 100%;
     height: 90%;
   }
@@ -238,6 +238,6 @@
   .classMap {
     margin-top: 50px;
   }
-  .line--dif {
-  }
+  /* .line--dif {
+  } */
 }
