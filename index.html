@@ -722,7 +722,7 @@
             </p>
           </span>
         </div>
-        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/sibiro_ru/122132757830/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Sibiro.ru</a><a href="https://yandex.ru/maps/65/novosibirsk/category/cabinet_furniture/184107869/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Cabinet furniture in Novosibirsk</a><iframe src="https://yandex.ru/map-widget/v1/org/sibiro_ru/122132757830/reviews/?ll=82.976395%2C54.993376&z=17" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/sibiro_ru/122132757830/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Sibiro.ru</a><a href="https://yandex.ru/maps/65/novosibirsk/category/cabinet_furniture/184107869/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Cabinet furniture in Novosibirsk</a><iframe src="https://yandex.ru/map-widget/v1/org/sibiro_ru/122132757830/reviews/?ll=82.976395%2C54.993376&z=17" width="100%" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
       </section>
     </main>
    <section class="reviews classMap reveal">
@@ -739,13 +739,17 @@
       }else{
         width=760+"px";
       }
-
+      document.querySelector('section.classMap > div > iframe').style.cssText=`
+        width:${width};
+        height:400px;
+      `;
       document.querySelector('.reviews > div > div').style.cssText=`
         width: ${width};
         height:800px;
         overflow:hidden;
         position:relative;
       `;
+      
     </script>
    </section>
   <footer w3-include-html="/includeHTML/footerInclude.html"></footer>
