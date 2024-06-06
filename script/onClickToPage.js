@@ -12,7 +12,7 @@ function portfolio(){
   location.href='/portfolio';
 }
 function photoWithInstallation(){
-  location.href='/photoWithInstallation';
+  location.href='/montages/';
 }
 
 function goToBack(){
