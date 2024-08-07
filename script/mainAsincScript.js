@@ -10,7 +10,7 @@ async function onClickMenuCan(){
             const menu=document.createElement('script');
             menu.src = "https://sibiro.ru/script/navbar.js";
             document.body.append(menu);
-        },1700);
+        },3700);
        
     });
     await one;
