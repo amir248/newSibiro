@@ -7,13 +7,13 @@ const discountLink = document.querySelector(".discount--link");
 
 menuBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  console.log("CLICK");
+  // console.log("CLICK");
   menuArea.style.transform = "translateX(0)";
   menuArea.style.opacity = "1";
 });
 menuCloseBtn.addEventListener("click", function (e) {
   e.preventDefault();
-  console.log("CLICK");
+  // console.log("CLICK");
   menuArea.style.transform = "translateX(-110%)";
   menuArea.style.opacity = "0";
 });
