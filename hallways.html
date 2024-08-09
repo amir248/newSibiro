@@ -150,9 +150,11 @@
     <main>
       <h1>Прихожие под заказ</h1>
       <div class="photo">
-        <img id="img"
-          src="https://sibiro.ru/image/gallery/one_13.jpg"
-          alt="мебель для гостиной" />
+        <picture>
+          <source srcset="image/gallery/hallways/IMG_4292-300.webp" media="(min-width: 500px)"  type="image/webp" />
+          <source srcset="photo.webp" type="image/webp" />
+          <img id="img" src="https://sibiro.ru/image/gallery/one_13.jpg" alt="прихожие под заказ в Новосибирске и области" />
+        </picture>
       </div>
 
       <p>
@@ -175,7 +177,7 @@
     </main>
   </body>
   <!-- script that go to include header and footer -->
-   <script async src="../script/mainAsincScript.js"></script>
+   <script src="../script/mainAsincScript.js"></script>
    <!-- <script defer src="../script/includePageSection.js"></script> -->
 
   <script type="text/javascript">
@@ -188,7 +190,6 @@
     document.querySelector('head > link[rel="shortcut icon"]').setAttribute('href','/image/icons/Sibiro--tab--logo.svg');
   })
   </script>
-  <!-- the end include -->
   <script type="text/javascript">
     let copyImageLink = [
       "image/gallery/hallways/IMG_4292.JPG",
@@ -196,6 +197,20 @@
       "image/gallery/hallways/IMG_4294.JPG",
       "image/gallery/hallways/IMG_4295.JPG",
       "image/gallery/hallways/IMG_4296.JPG"
+    ];
+    let copyImageLinkWebp = [
+      "image/gallery/hallways/IMG_4292.webp",
+      "image/gallery/hallways/IMG_4293.webp",
+      "image/gallery/hallways/IMG_4294.webp",
+      "image/gallery/hallways/IMG_4295.webp",
+      "image/gallery/hallways/IMG_4296.webp"
+    ];
+    let copyImageLinkWebpSmall = [
+      "image/gallery/hallways/IMG_4292-300.webp",
+      "image/gallery/hallways/IMG_4293-300.webp",
+      "image/gallery/hallways/IMG_4294-300.webp",
+      "image/gallery/hallways/IMG_4295-300.webp",
+      "image/gallery/hallways/IMG_4296-300.webp"
     ];
     let countClickOnArrows = +0;
     function createArrows() {
@@ -210,7 +225,7 @@
       document.querySelector(".photo").append(rightArrow);
 
       document.querySelector(".leftArrow").addEventListener("click", () => {
-        console.log('lefft CLICK '+countClickOnArrows);
+        // console.log('lefft CLICK '+countClickOnArrows);
         countClickOnArrows--;
         if (countClickOnArrows <= 0) {
           countClickOnArrows = copyImageLink.length - 1;
@@ -219,9 +234,11 @@
         document
           .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
       });
       document.querySelector(".rightArrow").addEventListener("click", () => {
-        console.log('Right Click! '+countClickOnArrows);
+        // console.log('Right Click! '+countClickOnArrows);
         countClickOnArrows++;
         if (countClickOnArrows >= copyImageLink.length) {
           countClickOnArrows = 0;
@@ -229,8 +246,10 @@
         document
           .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
       });
-    }
+    };
     window.addEventListener("DOMContentLoaded", createArrows);
     document
       .querySelector("#img")
@@ -242,8 +261,10 @@
         countClickOnArrows = 0;
       }
       document
-        .querySelector("img")
+        .querySelector("#img")
         .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+        document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+        document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
     });
   </script>
   <script type="text/javascript" src="script/onClickToPage.js"></script>
