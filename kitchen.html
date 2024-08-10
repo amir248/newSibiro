@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>Кухня на заказ в Новосибирске</title>
+    <title>Кухня под заказ в Новосибирске</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
@@ -80,7 +80,7 @@
           "url": "https://sibiro.ru/"
         },
         "datePublished": "2023-05-14T12:05:18+07:00",
-        "dateModified": "2024-08-07T09:32:09+07:00",
+        "dateModified": "2024-08-10T07:03:07+07:00",
         "image": "https://sibiro.ru/kitchen",
         "articleSection": "Promotion Discounts",
         "articleBody": "Проектирование кухни под заказ. Фотографии готовых работ, изготовления корпусной мебели под заказ.",
@@ -158,10 +158,14 @@
         <p>Кухня на заказ. Дизайн кухни под заказ, по индивидуальным проектам.</p>
       </span>
       <div class="photo">
-        <img
+        <picture>
+          <source srcset="image/gallery/hallways/IMG_4292-300.webp" media="(min-width: 500px)"  type="image/webp" />
+          <source srcset="photo.webp" type="image/webp" />
+          <img
           id="img"
           src="image/gallery/kitchen/kitchenDesign-4/kitchen021.jpg"
           alt="заказать кухню" />
+        </picture>
       </div>
       <p>
         Кухня – одно из самых важных и значимых помещений в доме, поэтому ее
@@ -213,7 +217,38 @@
     "image/gallery/kitchen/kitchenDesign-1/kitchen009.jpg",
     "image/gallery/kitchen/kitchenDesign-1/kitchen010.jpg",
     "image/gallery/kitchen/kitchenDesign-1/kitchen011.jpg"
-
+    ];
+    let copyImageLinkWebp = [
+      "image/gallery/kitchen/kitchenDesign-4/kitchen022.webp",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen023.webp",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen024.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen001.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen002.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen003.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen004.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen005.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen006.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen007.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen008.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen009.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen010.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen011.webp"
+    ];
+    let copyImageLinkWebpSmall = [
+      "image/gallery/kitchen/kitchenDesign-4/kitchen022-300.webp",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen023-300.webp",
+      "image/gallery/kitchen/kitchenDesign-4/kitchen024-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen001-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen002-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen003-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen004-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen005-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen006-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen007-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen008-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen009-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen010-300.webp",
+    "image/gallery/kitchen/kitchenDesign-1/kitchen011-300.webp"
     ];
     let countClickOnArrows = +0;
     function createArrows() {
@@ -237,6 +272,8 @@
         document
           .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
       });
       document.querySelector(".rightArrow").addEventListener("click", () => {
         // console.log('Right Click! '+countClickOnArrows);
@@ -247,6 +284,8 @@
         document
           .querySelector("#img")
           .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+          document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
       });
     }
     window.addEventListener("DOMContentLoaded", createArrows);
@@ -259,6 +298,8 @@
       document
         .querySelector("#img")
         .setAttribute("src", `${copyImageLink[countClickOnArrows]}`);
+        document.querySelector(".photo > picture > source:nth-child(2)").setAttribute("srcset", `${copyImageLinkWebp[countClickOnArrows]}`);
+        document.querySelector(".photo > picture > source:nth-child(1)").setAttribute("srcset", `${copyImageLinkWebpSmall[countClickOnArrows]}`);
     });
   </script>
   <script
