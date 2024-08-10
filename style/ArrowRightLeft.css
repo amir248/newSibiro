@@ -17,7 +17,8 @@ main img{
   font-size: 55px;
 }
 .photo > .leftArrow:hover{
-  color:violet;
+  color:#406950;
+  text-shadow:black 1px 1px;
   border-radius: 17px;
   background: lightgrey;
 }
@@ -26,7 +27,8 @@ main img{
   font-size: 55px;
 }
 .photo > .rightArrow:hover{
-  color:violet;
+  color:#406950;
+  text-shadow:black 1px 1px;
   border-radius: 17px;
   background: lightgrey;
 }
