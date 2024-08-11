@@ -87,3 +87,8 @@ main > p{
   width:100%;
   max-width:900px;
 }
+@media(max-width:900px){
+  main > p{
+    padding:3%;
+  }
+}
