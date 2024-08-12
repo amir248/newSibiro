@@ -91,4 +91,7 @@ main > p{
   main > p{
     padding:3%;
   }
+  main > ul{
+    padding:3%;
+  }
 }
