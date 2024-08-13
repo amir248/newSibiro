@@ -101,7 +101,7 @@
   </script>
   <!-- >>>>>> -->
 
-  <link rel="stylesheet" href="photos.css" />
+  <!-- <link rel="stylesheet" href="photos.css" /> -->
   <style media="screen">
 
       .boxImg{
@@ -140,7 +140,11 @@
   <main>
 <h1>Корпусная мебель для гостиной.</h1>
 <div class="photo">
-  <img id="img" src="#" alt="Корпусная мебель в гостинную под заказ">
+  <picture>
+    <source srcset="image/gallery/livingRoom/livingRoom-1/livingRoom001-300.webp" media="(max-width: 1920px)"  type="image/webp" />
+    <source srcset="image/gallery/livingRoom/livingRoom-1/livingRoom001.webp" type="image/webp" />
+  <img id="img" src="image/gallery/livingRoom/livingRoom-1/livingRoom001.jpg" alt="Корпусная мебель в гостинную под заказ">
+</picture>
 </div>
 <p>Гостиная – комната, к которой приковано больше всего внимания. Здесь по вечерам собирается вся семья, разговаривает, смотрит телевизор, играет, сюда приглашают гостей. Поэтому мебель должна быть соответствующая. Удобная и практичная, комфортная и вместительная, все предметы обязаны сочетаться и создавать единый дизайн. В каталоге собраны оригинальные дизайнерские идеи мебели для гостиной для создания уютной и дружеской атмосферы, которая вдохновляет и заряжает положительной энергией. <a href="tel:+79137870404">8&nbsp;913&nbsp;787&nbsp;04&nbsp;04</a></p>
 <button type="button" name="button" onClick="goToBack()">Перейти на главную</button>
@@ -170,8 +174,21 @@ let copyImageLink=[
 'image/gallery/livingRoom/livingRoom-1/livingRoom003.jpg',
 'image/gallery/livingRoom/livingRoom-1/livingRoom004.jpg',
 'image/gallery/livingRoom/livingRoom-1/livingRoom005.jpg',
-'image/gallery/livingRoom/livingRoom-1/livingRoom006.jpg',
 'image/gallery/livingRoom/livingRoom-1/livingRoom007.jpg'];
+let copyImageLinkWebp=[
+'image/gallery/livingRoom/livingRoom-1/livingRoom001.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom002.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom003.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom004.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom005.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom007.webp'];
+let copyImageLinkWebpSmall=[
+'image/gallery/livingRoom/livingRoom-1/livingRoom001-300.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom002-300.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom003-300.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom004-300.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom005-300.webp',
+'image/gallery/livingRoom/livingRoom-1/livingRoom007-300.webp'];
 let countClickOnArrows=+0;
 function createArrows(){
   let leftArrow=document.createElement('div');
@@ -192,6 +209,8 @@ function createArrows(){
       // console.log(copyImageLink.length);
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
   document.querySelector('.rightArrow').addEventListener('click',()=>{
     // console.log('Right Click! '+countClickOnArrows);
@@ -200,10 +219,14 @@ function createArrows(){
       countClickOnArrows=0;
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
 }
 window.addEventListener('DOMContentLoaded',createArrows);
 document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   document.querySelector('#img').addEventListener('click',()=>{
     // console.log('click'+countClickOnArrows);
     countClickOnArrows++;
@@ -211,6 +234,8 @@ document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnA
       countClickOnArrows=0;
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
 </script>
 <script type="text/javascript" src='script/onClickToPage.js'></script>
