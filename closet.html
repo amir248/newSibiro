@@ -69,7 +69,7 @@
       "name" : "Мебель Sibiro"
     },
     "datePublished" : "2024-02-30T15:17:34+07:00",
-    "dateModified" : "2024-08-07T09:21:52+07:00",
+    "dateModified" : "2024-08-13T09:47:07+07:00",
     "image" : "https://sibiro.ru/",
     "articleSection" : "Promotion Discounts",
     "articleBody" : "Шкафы купе под заказ в новосибирске и облости. Фотографии готовых работ, изготовления корпусной мебели под заказ.",
@@ -138,7 +138,12 @@
   <main>
 <h1>Заказать шкаф купе</h1>
 <div class="photo">
-  <img id="img" src="#" alt="шкафы купе, прихожие, гардеробные, мебель для корридора под заказ">
+  <picture>
+    <source srcset="image/gallery/photo-from-telega/photo_2023-10-02_12-17-24-300.webp" media="(max-width: 1700px)"  type="image/webp" />
+    <source srcset="image/gallery/photo-from-telega/photo_2023-10-02_12-17-24.webp" type="image/webp" />
+
+  <img id="img" src="image/gallery/photo-from-telega/photo_2023-10-02_12-17-24.jpg" alt="шкафы купе, прихожие, гардеробные, мебель для корридора под заказ">
+</picture>
 </div>
 <p> В том, что шкафы-купе сейчас являются весьма популярным предметом при обустройстве квартиры, нет ничего удивительного. Место для хранения нужных (и не очень) вещей, памятных подарков и разных мелочей необходимо было всегда. Раньше эту функцию выполняла кладовка, но планировка современных домов практически не предусматривает наличие этой «тайной комнаты».<a href="tel:+79137870404">8&nbsp;913&nbsp;787&nbsp;04&nbsp;04</a></p>
 <button type="button" name="button" onClick="goToBack()">Перейти на главную</button>
@@ -167,6 +172,16 @@ let copyImageLink=[
 
 'image/gallery/photoWithInstalllation/IMG_4339.JPG',
 'image/gallery/photoWithInstalllation/IMG_4340.JPG'];
+let copyImageLinkWebp=[
+'image/gallery/photo-from-telega/photo_2023-10-02_12-17-24.webp',
+
+'image/gallery/photoWithInstalllation/IMG_4339.webp',
+'image/gallery/photoWithInstalllation/IMG_4340.webp'];
+let copyImageLinkWebpSmall=[
+'image/gallery/photo-from-telega/photo_2023-10-02_12-17-24-300.webp',
+
+'image/gallery/photoWithInstalllation/IMG_4339-300.webp',
+'image/gallery/photoWithInstalllation/IMG_4340-300.webp'];
 let countClickOnArrows=+0;
 function createArrows(){
   let leftArrow=document.createElement('div');
@@ -187,6 +202,8 @@ function createArrows(){
       // console.log(copyImageLink.length);
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
   document.querySelector('.rightArrow').addEventListener('click',()=>{
     // console.log('Right Click! '+countClickOnArrows);
@@ -195,10 +212,14 @@ function createArrows(){
       countClickOnArrows=0;
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
 }
 window.addEventListener('DOMContentLoaded',createArrows);
 document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   document.querySelector('#img').addEventListener('click',()=>{
     // console.log('click'+countClickOnArrows);
     countClickOnArrows++;
@@ -206,6 +227,8 @@ document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnA
       countClickOnArrows=0;
     }
     document.querySelector('#img').setAttribute('src',`${copyImageLink[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(2)').setAttribute('srcset',`${copyImageLinkWebp[countClickOnArrows]}`);
+    document.querySelector('.photo > picture > source:nth-child(1)').setAttribute('srcset',`${copyImageLinkWebpSmall[countClickOnArrows]}`);
   });
 </script>
 <script type="text/javascript" src='script/onClickToPage.js'></script>
