@@ -63,6 +63,9 @@
         width:300px;
         height: 150px;
       }
+      picture:nth-child(14) > img, picture:nth-child(6) > img{
+        border-radius: 0 7px 7px 0;
+       }
       picture:nth-child(10) > img, picture:nth-child(18) > img{
         float:right;
         margin-left:15px;
@@ -70,6 +73,8 @@
         object-fit:cover;
         width:300px;
         height: 150px;
+        border-radius:7px 0 0 7px;
+
       }
       @media(max-width:500px){
         picture:nth-child(10) > img, picture:nth-child(18) > img, picture> img{
@@ -78,7 +83,11 @@
           max-width: 100%;
           object-fit:cover;
           height:150px;
+          border-radius: 0;
         }
+        picture:nth-child(14) > img, picture:nth-child(6) > img{
+        border-radius: 0;
+       }
     }
       article{
         display:block;
