@@ -15,9 +15,109 @@
         header{
           top:0; /* I don't understand what it */
         }
-       
+       .firstImg, .secondImg, .threeImg{
+        width:100%;
+       }
+       ul > li{
+        margin-left:37px;
+       }
+       article > p{
+        margin:2%;
+       }
+       @media(min-width:700px){
+        .secondImg{
+            float:left;
+            max-width:350px;
+            border-radius: 0 17px 17px 0;
+            margin-right:37px;
+        }
+        .firstImg, .threeImg{
+            float:right;
+            max-width:350px;
+            border-radius: 17px 0 0 17px;
+        }
+       }
       </style>
       <link rel="stylesheet" href="../style/responsive.css" />
+      <script type="application/ld+json">{
+        "@context" : "http://schema.org",
+        "@type" : "LocalBusiness",
+        "name" : "Мебель Sibiro",
+         "priceRange" : "₽ 10000 - ₽ 30000000",
+        "image" : "https://sibiro.ru/image/6816e83f636b5doc1289952471.jpeg",
+        "telephone" : "+79137870404",
+        "email" : "",
+        "address" : {
+          "@type" : "PostalAddress",
+          "streetAddress" : "Новосибирск ул. Большевистская, 177/24",
+          "addressLocality" : "Сибирь",
+          "addressRegion" : "Сибирский регион",
+          "addressCountry" : "RU",
+          "postalCode" : "rus"
+        },
+        "openingHoursSpecification" : {
+          "@type" : "OpeningHoursSpecification",
+          "opens" : "9:00",
+          "closes" : "18:00",
+          "dayOfWeek": [{
+                 "@type": "DayOfWeek",
+                 "@id": "http://schema.org/Monday",
+                 "name": "Monday"
+             },
+             {
+                 "@type": "DayOfWeek",
+                 "@id": "http://schema.org/Tuesday",
+                 "name": "Tuesday"
+             },
+             {
+                 "@type": "DayOfWeek",
+                 "@id": "http://schema.org/Wednesday",
+                 "name": "Wednesday"
+             },
+             {
+                 "@type": "DayOfWeek",
+                 "@id": "http://schema.org/Thursday",
+                 "name": "Thursday"
+             },
+             {
+                 "@type": "DayOfWeek",
+                 "@id": "http://schema.org/Friday",
+                 "name": "Friday"
+             }]
+      
+        },
+        "url" : "https://sibiro.ru/"
+      }</script>
+        <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Article",
+          "name" : "Корпусная мебель под заказ в Новосибирске от производителя",
+          "headline": "Корпусная мебель под заказ",
+          "author" : {
+            "@type" : "Person",
+            "name" : "Мебель Sibiro"
+          },
+          "datePublished" : "2025-05-04T12:17:37+07:00",
+          "dateModified" : "2025-05-04T12:17:47+07:00",
+          "image" : "https://sibiro.ru/",
+          "articleSection" : "Почему стоит выбрать мебель на заказ",
+          "articleBody" : "ШИндивидуальный подход к созданию мебели становится все более популярным в современном мире. Корпусная мебель под заказ позволяет создать уникальный интерьер, идеально подходящий под размеры и потребности конкретного помещения.",
+          "url" : "https://sibiro.ru/custom-made-cabinet-furniture",
+          "publisher" : {
+            "@type" : "Organization",
+            "name" : "МЕБЕЛЬ Sibiro",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://sibiro.ru/image/favicon.svg"
+              }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://sibiro.ru/custom-made-cabinet-furniture"
+          }
+        }
+        </script>
 </head>
 <body>
     <header w3-include-html="../includeHTML/headerInclude.html">
@@ -27,6 +127,9 @@
         
             <article>
             <h1>Корпусная мебель под заказ в Новосибирске от производителя</h1>
+            <picture>
+                <img class="firstImg" src="../image/6816e83f636b5doc1289952471.jpeg" alt="Корпусная мебель под заказ в Новосибирске">
+            </picture>
             <strong>Почему стоит выбрать мебель на заказ</strong>
             <p>Индивидуальный подход к созданию мебели становится все более популярным в современном мире. Корпусная мебель под заказ позволяет создать уникальный интерьер, идеально подходящий под размеры и потребности конкретного помещения.</p>
             <h2>Преимущества заказа мебели в Sibiro.ru</h2>
@@ -47,6 +150,9 @@
                 <li>Доставку в удобное для клиента время</li>
                 <li>Квалифицированную установку и сборку</li>
             </ul>
+            <picture>
+                <img class="secondImg" src="../image/6816ecade4a78doc901847076.jpeg" alt="Корпусная мебель под заказ в Новосибирске">
+            </picture>
             <h3>Специальное предложение</h3>
             <ul>
                 <p>Sibiro.ru регулярно проводит акции для своих клиентов:</p>
@@ -72,7 +178,9 @@
                 <li>Гибкие условия оплаты и доставки</li>
                 <li>Гарантийное обслуживание</li>
             </ul>
-
+            <picture>
+                <img class="threeImg" src="../image/6816e6c69497bdoc797336933.jpeg" alt="Корпусная мебель под заказ в Новосибирске">
+            </picture>
             <h3>Контактная информация</h3>
 
             <p>Sibiro.ru находится по адресу: г. Новосибирск, ул. Большевистская, 177/24
