@@ -35,6 +35,18 @@ function threeth(){
             // toGoOnWriteAtThePage(oK);
     });
 };
+function year(){
+    return new Promise((resolve)=>{
+        function d(){
+            const dat = new Date();
+            let year = dat.getFullYear();
+            document.querySelector("#year").innerHTML=`${year}`;
+        }
+        setTimeout(()=>{
+            resolve(d());
+        },1777);
+    });
+}
 async function onClickMenuCan(){
     
     await onePromise();
@@ -42,6 +54,7 @@ async function onClickMenuCan(){
     await twoPromise();
 
     await threeth();
+    await year();
 };
 // onClickMenuCan();
 window.addEventListener('DOMContentLoaded',onClickMenuCan);
