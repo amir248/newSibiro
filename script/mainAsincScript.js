@@ -14,14 +14,17 @@ function twoPromise(){
     return new Promise((resolve)=>{
         // console.log('resolve oK and TwoPromise');
         function loadIsMenu(){
-            setTimeout(()=>{
+           
                 // console.log('set TimeOut');
                 const menu=document.createElement('script');
                 menu.src = "https://sibiro.ru/script/navbar.js";
                 document.body.append(menu);
-            },2700);
+       
         };
-        resolve(loadIsMenu());
+        setTimeout(()=>{
+            resolve(loadIsMenu());
+        },3777);
+        
     });
 };
 
@@ -44,7 +47,7 @@ function year(){
         }
         setTimeout(()=>{
             resolve(d());
-        },1777);
+        },3777);
     });
 }
 async function onClickMenuCan(){
@@ -53,7 +56,7 @@ async function onClickMenuCan(){
     
     await twoPromise();
 
-    await threeth();
+    // await threeth();
     await year();
 };
 // onClickMenuCan();
