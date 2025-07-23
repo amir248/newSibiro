@@ -43,7 +43,7 @@ function year(){
         function d(){
             const dat = new Date();
             let year = dat.getFullYear();
-            document.querySelector("#year").innerHTML=`${year}`;
+            document.querySelector("#year").innerHTML= "2010 — "+`${year}`;
         }
         setTimeout(()=>{
             resolve(d());
