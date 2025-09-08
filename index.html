@@ -660,7 +660,131 @@
           получить консультацию
         </button>
       </section>
+      <section>
+       <style>
+          /* Основной контейнер формы */
+          #contactForm {
+            display: grid;
+            grid-template-columns: 1fr; /* одна колонка для мобильных */
+            gap: 15px; /* расстояние между элементами */
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #406950;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-family: Arial, sans-serif;
+          }
 
+          /* Метки */
+          #contactForm label {
+            font-weight: bold;
+          }
+
+          /* Поля ввода и текстовое поле */
+          #contactForm input,
+          #contactForm textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border 0.3s, box-shadow 0.3s;
+          }
+
+          #contactForm input:focus,
+          #contactForm textarea:focus {
+            border-color: #00ff62ff;
+            box-shadow: 0 0 5px rgba(123, 255, 0, 0.5);
+            outline: none;
+          }
+
+          /* Кнопка отправки */
+          #contactForm button {
+            padding: 12px;
+            background-color: #00ff6aff;
+            color: white;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+          }
+
+          #contactForm button:hover {
+            background-color: #00b345ff;
+            transform: translateY(-2px);
+          }
+
+          /* Сообщение об ответе */
+          #formResponse {
+            text-align: center;
+            font-weight: bold;
+          }
+
+          /* Для больших экранов можно сделать двухколоночную форму */
+          @media (min-width: 600px) {
+            #contactForm {
+              grid-template-columns: 1fr 1fr;
+              gap: 20px;
+            }
+
+            #contactForm label {
+              grid-column: span 2;
+            }
+
+            #contactForm textarea {
+              grid-column: span 2;
+            }
+
+            #contactForm button {
+              grid-column: span 2;
+              justify-self: center;
+              width: 150px;
+            }
+          }
+        </style>
+        <div style="width:100%;max-width:100%;text-align:center;margin:3%;">
+          <h3>Форма обратной связи: </h3>
+        </div>
+        <form id="contactForm" method="POST" action="https://furniture.sibiro.ru/send-message.php">
+          
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Сообщение:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Отправить</button>
+        </form>
+
+        <div id="formResponse" style="margin-top:10px;color:green;"></div>
+
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e){
+          e.preventDefault();
+          const form = this;
+          const formData = new FormData(form);
+
+          fetch(form.action, {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('formResponse').innerText = data;
+            form.reset();
+          })
+          .catch(err => {
+            document.getElementById('formResponse').innerText = "Ошибка. Попробуйте позже.";
+            console.error(err);
+          });
+        });
+        </script>
       <!-- <div class="form--div">
         <div style="color: white; text-shadow: black 1px 1px">
           <h2>Оплатить заказ.</h2>
